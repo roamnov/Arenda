@@ -1,0 +1,37 @@
+{% extends "wrapper2.html"%}
+{% load staticfiles %}
+{% block content %}
+    
+    <section id="features" class="features">
+           
+        <div class="container" >
+            <div class="row">
+                    <div>
+                        <div  class="col">
+                         
+                          <img class="card-img-top"  src={{place.info_img1}} >
+                                          
+                        </div>
+                            <iframe class="map" src="{{place.info_maplink}}" width="96%" height="25%" frameborder="0"></iframe>
+                        <h2 class="title__main">
+                            {{place.info_second_name}}
+                        </h2>
+                        <p class="title__text">
+                            {{place.info_price}}
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+            <div class="col" align="right" padding-bottom="15px">
+            <a  href="/arenda"  class="feature__text"  >
+                <button  type="submit" class="btn btn-outline-primary" >Вернуться обратно</button>
+            </a>
+            
+            </div>
+            <HR/>
+        </section>
+            
+{% endblock %}

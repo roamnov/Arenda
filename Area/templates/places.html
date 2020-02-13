@@ -1,0 +1,22 @@
+{% extends "wrapper.html"%}
+{% load staticfiles %}
+{% block content %}
+{% for item in place %}.
+
+<a  class="col-lg-2 " >
+<div class="card-center" style="width: 18rem;">
+  
+        <img  class="card-img-top" src="{{item.place_img}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{item.place_name}}</h5>
+          <p class="card-text">
+            {{item.place_area}}
+          </p>
+           {{item.place_adress}}
+          <BR/>
+          <a  href="{{item.id}}" class="btn btn-primary">Больше информации</a>
+        </div>
+      </div>
+    </a>
+ {% endfor %}
+{% endblock %}
